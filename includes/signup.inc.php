@@ -36,6 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit();
         }
 
+        create_user($pdo, $username, $pwd, $email);
+        header("Location: ../index.php?signup=success");
+        exit();
     } catch (\Throwable $th) {
         die("Connection Failed" . $th->getMessage());
     }

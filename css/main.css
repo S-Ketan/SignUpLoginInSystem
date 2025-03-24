@@ -1,51 +1,72 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
 h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
+}
+
+.form-error {
+  color: #ff0000; /* Red color for error text */
+  font-size: 14px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  margin: 5px 0; /* Add some spacing around the error message */
+  padding: 5px; /* Add padding for better readability */
+  background-color: #ffe6e6; /* Light red background for emphasis */
+  border: 1px solid #ffcccc; /* Border to highlight the error */
+  border-radius: 4px; /* Rounded corners */
+}
+.form-success {
+  color: #28a745; /* Green color for success text */
+  font-size: 14px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  margin: 5px 0; /* Add some spacing around the success message */
+  padding: 5px; /* Add padding for better readability */
+  background-color: #d4edda; /* Light green background for emphasis */
+  border: 1px solid #c3e6cb; /* Border to highlight the success message */
+  border-radius: 4px; /* Rounded corners */
 }

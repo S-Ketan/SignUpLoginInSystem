@@ -24,3 +24,15 @@ function get_email(object $pdo, string $email)
 
     return $result;
 }
+function set_user(object $pdo, string $username, string $pwd ,string $email){
+    $query = "INSERT INTO users (username, email, pwd) VALUES (:username, :email, :pwd);";
+    $stmt = $pdo->prepare($query);
+    $options = [
+        "cost" => 12,
+    ];
+    $hashedpwd = password_hash($pwd, PASSWORD_BCRYPT, $options);
+    $stmt->bindPARAM(":username", $username);
+    $stmt->bindPARAM(":email", $email);
+    $stmt->bindPARAM(":pwd", $hashedpwd);
+    $stmt->execute();
+}
